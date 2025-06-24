@@ -1,24 +1,15 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import ExampleComponent from './ExampleComponent';
+import SnakeGame from './SnakeGame';
 
-function ExampleComponent() {
-  // useState: manages the count state
-  const [count, setCount] = useState(0);
-
-  // useEffect: runs whenever count changes
-  useEffect(() => {
-    console.log(`Count changed to: ${count}`);
-    // This is a side effect - logging to console
-    document.title = `You clicked ${count} times`;
-  }, [count]);
-
+function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+    <div>
+      <ExampleComponent />
+      <hr />
+      <SnakeGame />
     </div>
   );
 }
 
-export default ExampleComponent;
+export default App;
