@@ -8,7 +8,7 @@ function ExampleComponent() {
   useEffect(() => {
     console.log(`Count changed to: ${count}`);
     // This is a side effect - logging to console
-    document.title = `🔵 You clicked ${count} times`;
+    document.title = `🔵 I clicked ${count} times`;
   }, [count]);
 
   return (
